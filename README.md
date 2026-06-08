@@ -228,7 +228,7 @@ redrob-ranker/
 ├── rank.py                    # Main ranker (alias for ranker.py)
 ├── ranker.py                  # Full source — scoring engine
 ├── requirements.txt           # Python dependencies
-├── submission_metadata.yaml   # Hackathon metadata
+├── submission_metadata.yaml   # metadata
 ├── validate_submission.py     # Official format validator (from bundle)
 └── README.md                  # This file
 ```
