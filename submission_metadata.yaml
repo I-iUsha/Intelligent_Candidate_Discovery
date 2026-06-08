@@ -1,0 +1,56 @@
+team_name: "redrob-ranker"
+
+primary_contact:
+  name: "Team Lead"
+  email: "primary@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Team Lead"
+    email: "primary@example.com"
+    role: "ML Engineer / Team Lead"
+
+github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Linux (Ubuntu 24), CPU only"
+  cpu_cores: 4
+  ram_gb: 16
+  python_version: "3.12.3"
+  os: "Ubuntu 24.04 LTS"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architecture discussion, code review, and debugging.
+  All candidate data processing and scoring logic was designed and
+  implemented by the team. No candidate data was fed to any external LLM.
+  The ranking step makes zero network calls and runs fully offline.
+
+methodology_summary: |
+  Multi-pillar hybrid scoring system with 5 stages: honeypot detection,
+  hard title filtering, 4-pillar scoring (skill cluster quality, AI career
+  depth, experience fit, location), behavioral availability multiplier, and
+  reasoning generation. Skills are scored on quality (proficiency × duration
+  × endorsements), not just presence — the primary anti-keyword-stuffer
+  mechanism. Career descriptions are scanned to verify skills are
+  corroborated by actual work history. Availability is a multiplicative
+  modifier so an inactive candidate cannot "average out" a high skill score.
+  Consulting-only careers receive a 0.70 penalty per JD guidance. Runtime
+  is ~63 seconds for 100K candidates on CPU with no network calls.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
