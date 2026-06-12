@@ -1,18 +1,18 @@
 team_name: "redrob-ranker"
 
 primary_contact:
-  name: "Team Lead"
-  email: "primary@example.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "ILLURI USHA SREE"
+  email: "ushasreeilluri@gmail.com"
+  phone: "+91-8499849283"
 
 team_members:
-  - name: "Team Lead"
-    email: "primary@example.com"
-    role: "ML Engineer / Team Lead"
+  - name: "I.Usha Sree"
+    email: "ushasreeilluri@gmail.com"
+    role: "ML Engineer"
 
-github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+github_repo: "https://github.com/I-iUsha/Intelligent_Candidate_Discovery"
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/Ahsu200/redrob-ranker"
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
